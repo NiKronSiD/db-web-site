@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тренды 2024 — DB Web</title>
+  <meta name="description" content="Современные тренды в базах данных 2024">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="columns">
+        <div class="column col-3 col-md-6 col-sm-10">
+          <a href="index.html" class="navbar-brand">
+            <img src="img/logo.svg" alt="Логотип DB Web" width="32" height="32">
+            <span>DB&nbsp;Web</span>
+          </a>
+        </div>
+        <div class="column col-9 col-md-6 col-sm-2 text-right">
+          <button class="btn btn-link btn-burger" id="burger" aria-label="Открыть меню">
+            <i class="icon icon-menu"></i>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul class="nav">
+              <li class="nav-item"><a href="index.html">Главная</a></li>
+              <li class="nav-item"><a href="sql.html">SQL</a></li>
+              <li class="nav-item"><a href="nosql.html">NoSQL</a></li>
+              <li class="nav-item"><a href="comparison.html">Сравнение</a></li>
+              <li class="nav-item"><a href="trends.html" class="active">Тренды</a></li>
+              <li class="nav-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="columns">
+      <main class="column col-9 col-md-12">
+        <h1>Тренды 2024</h1>
+        <p class="lead">Что происходит в мире баз данных прямо сейчас.</p>
+
+        <h2>Ключевые направления</h2>
+        <ul>
+          <li><strong>Serverless-базы:</strong> PlanetScale, Neon, Supabase.</li>
+          <li><strong>Multi-model:</strong> одна база — несколько моделей данных.</li>
+          <li><strong>HTAP:</strong> гибрид OLTP и OLAP в одной системе.</li>
+          <li><strong>Edge-базы:</strong> данные ближе к пользователю.</li>
+          <li><strong>Векторные базы:</strong> Pinecone, Weaviate — для AI.</li>
+        </ul>
+
+        <h2>Сравнение популярности</h2>
+        <table class="table table-striped">
+          <caption>Динамика популярности 2022–2024</caption>
+          <thead>
+            <tr><th>СУБД</th><th>2022</th><th>2023</th><th>2024</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>PostgreSQL</td><td>540</td><td>600</td><td>645</td></tr>
+            <tr><td>MongoDB</td><td>480</td><td>485</td><td>487</td></tr>
+            <tr><td>MySQL</td><td>1200</td><td>1190</td><td>1180</td></tr>
+            <tr><td>Redis</td><td>170</td><td>175</td><td>180</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Видео: будущее баз данных</h2>
+        <div class="video-wrapper">
+          <iframe src="https://rutube.ru/video/f1e7d5ea16dddcd373d931037db55117/?r=wd"
+                  title="Будущее баз данных"
+                  allowfullscreen
+                  loading="lazy"></iframe>
+        </div>
+
+        <h2>Прогнозы</h2>
+        <ol>
+          <li>Рост векторных баз из-за AI/ML.</li>
+          <li>Слияние SQL и NoSQL в гибридные решения.</li>
+          <li>Автоматизация управления базами (AIOps).</li>
+        </ol>
+      </main>
+
+      <aside class="column col-3 col-md-12">
+        <div class="sidebar">
+          <h4>Навигация</h4>
+          <ul class="nav nav-vertical">
+            <li class="nav-item"><a href="sql.html">SQL</a></li>
+            <li class="nav-item"><a href="nosql.html">NoSQL</a></li>
+            <li class="nav-item"><a href="comparison.html">Сравнение</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="text-center copyright">© 2024 DB Web. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

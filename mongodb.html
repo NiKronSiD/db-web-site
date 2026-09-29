@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MongoDB — DB Web</title>
+  <meta name="description" content="Документоориентированная NoSQL база данных MongoDB">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="columns">
+        <div class="column col-3 col-md-6 col-sm-10">
+          <a href="index.html" class="navbar-brand">
+            <img src="img/logo.svg" alt="Логотип DB Web" width="32" height="32">
+            <span>DB&nbsp;Web</span>
+          </a>
+        </div>
+        <div class="column col-9 col-md-6 col-sm-2 text-right">
+          <button class="btn btn-link btn-burger" id="burger" aria-label="Открыть меню">
+            <i class="icon icon-menu"></i>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul class="nav">
+              <li class="nav-item"><a href="index.html">Главная</a></li>
+              <li class="nav-item"><a href="sql.html">SQL</a></li>
+              <li class="nav-item"><a href="nosql.html" class="active">NoSQL</a></li>
+              <li class="nav-item"><a href="comparison.html">Сравнение</a></li>
+              <li class="nav-item"><a href="trends.html">Тренды</a></li>
+              <li class="nav-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="columns">
+      <main class="column col-9 col-md-12">
+        <h1>MongoDB</h1>
+        <p class="lead">Документоориентированная NoSQL-база данных с гибкой схемой.</p>
+        <img src="img/mongodb.jpg" alt="MongoDB" title="MongoDB" class="img-responsive" loading="lazy">
+
+        <h2>Особенности</h2>
+        <ul>
+          <li>Хранение данных в BSON-документах.</li>
+          <li>Горизонтальное шардирование.</li>
+          <li>Агрегационный пайплайн.</li>
+          <li>Replica Set для отказоустойчивости.</li>
+        </ul>
+
+        <h2>Пример запросов</h2>
+        <pre><code>db.users.insertOne({ name: "Alice", age: 30 });
+db.users.find({ age: { $gt: 25 } });
+db.users.aggregate([
+  { $group: { _id: "$age", count: { $sum: 1 } } }
+]);</code></pre>
+
+        <h2>Когда выбирать MongoDB</h2>
+        <ol>
+          <li>Быстрые прототипы и MVP.</li>
+          <li>Каталоги товаров с разной структурой.</li>
+          <li>Real-time аналитика и логи.</li>
+        </ol>
+      </main>
+
+      <aside class="column col-3 col-md-12">
+        <div class="sidebar">
+          <h4>NoSQL</h4>
+          <ul class="nav nav-vertical">
+            <li class="nav-item"><a href="nosql.html">Назад к NoSQL</a></li>
+            <li class="nav-item"><a href="comparison.html">Сравнение</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="text-center copyright">© 2024 DB Web. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

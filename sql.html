@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL-базы данных — DB Web</title>
+  <meta name="description" content="Реляционные базы данных: PostgreSQL, MySQL, SQLite">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="columns">
+        <div class="column col-3 col-md-6 col-sm-10">
+          <a href="index.html" class="navbar-brand">
+            <img src="img/logo.svg" alt="Логотип DB Web" width="32" height="32">
+            <span>DB&nbsp;Web</span>
+          </a>
+        </div>
+        <div class="column col-9 col-md-6 col-sm-2 text-right">
+          <button class="btn btn-link btn-burger" id="burger" aria-label="Открыть меню">
+            <i class="icon icon-menu"></i>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul class="nav">
+              <li class="nav-item"><a href="index.html">Главная</a></li>
+              <li class="nav-item"><a href="sql.html" class="active">SQL</a></li>
+              <li class="nav-item"><a href="nosql.html">NoSQL</a></li>
+              <li class="nav-item"><a href="comparison.html">Сравнение</a></li>
+              <li class="nav-item"><a href="trends.html">Тренды</a></li>
+              <li class="nav-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="columns">
+      <main class="column col-9 col-md-12">
+        <h1>SQL-базы данных</h1>
+        <p class="lead">Реляционные СУБД — классика веб-разработки, основанная на строгой схеме и языке SQL.</p>
+
+        <img src="img/sql.jpg" alt="Схема реляционной базы данных" title="Реляционная модель" class="img-responsive" loading="lazy">
+
+        <h2>Основные представители</h2>
+        <ul>
+          <li><a href="postgresql.html">PostgreSQL</a> — объектно-реляционная СУБД с открытым кодом.</li>
+          <li><a href="sqlite.html">SQLite</a> — встраиваемая база данных.</li>
+          <li>MySQL / MariaDB — популярна в веб-проектах.</li>
+          <li>Oracle Database — корпоративный стандарт.</li>
+        </ul>
+
+        <h2>Пример SQL-запроса</h2>
+        <pre><code>SELECT u.name, COUNT(o.id) AS orders_count
+FROM users u
+LEFT JOIN orders o ON o.user_id = u.id
+GROUP BY u.name
+ORDER BY orders_count DESC;</code></pre>
+
+        <h2>Преимущества</h2>
+        <ol>
+          <li>ACID-транзакции.</li>
+          <li>Строгая типизация и целостность данных.</li>
+          <li>Мощный язык запросов.</li>
+        </ol>
+      </main>
+
+      <aside class="column col-3 col-md-12">
+        <div class="sidebar">
+          <h4>SQL-СУБД</h4>
+          <ul class="nav nav-vertical">
+            <li class="nav-item"><a href="postgresql.html">PostgreSQL</a></li>
+            <li class="nav-item"><a href="sqlite.html">SQLite</a></li>
+          </ul>
+          <h4>Полезное</h4>
+          <ul class="nav nav-vertical">
+            <li class="nav-item"><a href="comparison.html">Сравнение с NoSQL</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="text-center copyright">© 2024 DB Web. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

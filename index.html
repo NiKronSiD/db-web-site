@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Базы данных в Web-разработке — Главная</title>
+  <meta name="description" content="Учебный сайт о базах данных SQL и NoSQL в веб-разработке">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="columns">
+        <div class="column col-3 col-md-6 col-sm-10">
+          <a href="index.html" class="navbar-brand">
+            <img src="img/logo.svg" alt="Логотип DB Web" title="DB Web" width="32" height="32">
+            <span>DB&nbsp;Web</span>
+          </a>
+        </div>
+        <div class="column col-9 col-md-6 col-sm-2 text-right">
+          <button class="btn btn-link btn-burger" id="burger" aria-label="Открыть меню">
+            <i class="icon icon-menu"></i>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul class="nav">
+              <li class="nav-item"><a href="index.html" class="active">Главная</a></li>
+              <li class="nav-item"><a href="sql.html">SQL</a></li>
+              <li class="nav-item"><a href="nosql.html">NoSQL</a></li>
+              <li class="nav-item"><a href="comparison.html">Сравнение</a></li>
+              <li class="nav-item"><a href="trends.html">Тренды</a></li>
+              <li class="nav-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Базы данных в Web-разработке</h1>
+      <p class="lead">Полный обзор SQL и NoSQL решений: от классических реляционных СУБД до современных документоориентированных и графовых баз.</p>
+      <a href="sql.html" class="btn btn-primary btn-lg">Начать изучение</a>
+    </div>
+  </section>
+
+  <!-- ===== MAIN + ASIDE ===== -->
+  <div class="container">
+    <div class="columns">
+      <main class="column col-9 col-md-12">
+        <h2>Что вы узнаете</h2>
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <div class="card">
+              <div class="card-image">
+                <img src="img/sql.jpg" alt="SQL базы данных" title="SQL" class="img-responsive" loading="lazy">
+              </div>
+              <div class="card-header">
+                <h3 class="card-title">SQL-базы данных</h3>
+                <p class="card-subtitle">PostgreSQL, MySQL, SQLite</p>
+              </div>
+              <div class="card-body">
+                Реляционная модель, ACID, строгая схема, JOIN-запросы.
+              </div>
+              <div class="card-footer">
+                <a href="sql.html" class="btn btn-primary">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="column col-6 col-sm-12">
+            <div class="card">
+              <div class="card-image">
+                <img src="img/nosql.jpg" alt="NoSQL базы данных" title="NoSQL" class="img-responsive" loading="lazy">
+              </div>
+              <div class="card-header">
+                <h3 class="card-title">NoSQL-базы данных</h3>
+                <p class="card-subtitle">MongoDB, Redis, Neo4j</p>
+              </div>
+              <div class="card-body">
+                Гибкая схема, горизонтальное масштабирование, CAP-теорема.
+              </div>
+              <div class="card-footer">
+                <a href="nosql.html" class="btn btn-primary">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Популярность СУБД (2024)</h2>
+        <table class="table table-striped table-hover">
+          <caption>Рейтинг DB-Engines на сентябрь 2024</caption>
+          <thead>
+            <tr>
+              <th>Место</th>
+              <th>СУБД</th>
+              <th>Тип</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Oracle</td><td>Реляционная</td><td>1245</td></tr>
+            <tr><td>2</td><td>MySQL</td><td>Реляционная</td><td>1180</td></tr>
+            <tr><td>3</td><td>Microsoft SQL Server</td><td>Реляционная</td><td>1023</td></tr>
+            <tr><td>4</td><td>PostgreSQL</td><td>Реляционная</td><td>645</td></tr>
+            <tr><td>5</td><td>MongoDB</td><td>Документоориентированная</td><td>487</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Видеообзор</h2>
+        <div class="video-wrapper">
+          <iframe src="https://vkvideo.ru/video-228998895_456239097"
+                  title="Видео о базах данных"
+                  allowfullscreen
+                  loading="lazy"></iframe>
+        </div>
+      </main>
+
+      <aside class="column col-3 col-md-12">
+        <div class="sidebar">
+          <h4>Навигация</h4>
+          <ul class="nav nav-vertical">
+            <li class="nav-item"><a href="sql.html">SQL-базы</a></li>
+            <li class="nav-item"><a href="nosql.html">NoSQL-базы</a></li>
+            <li class="nav-item"><a href="comparison.html">Сравнение</a></li>
+            <li class="nav-item"><a href="trends.html">Тренды 2024</a></li>
+          </ul>
+
+          <h4>Подписка на новости</h4>
+          <form action="#" method="post" class="subscribe-form">
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Подписаться</button>
+          </form>
+
+          <div class="banner">
+            <p><strong>Реклама</strong></p>
+            <p>Курс «Базы данных с нуля» — скидка 30%.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column col-4 col-md-12">
+          <h5>DB Web</h5>
+          <p>Учебный проект по CSS-фреймворку Spectre.css.</p>
+        </div>
+        <div class="column col-4 col-md-12">
+          <h5>Контакты</h5>
+          <ul class="list-unstyled">
+            <li>Email: info@dbweb.ru</li>
+            <li>Тел.: +7 (999) 123-45-67</li>
+          </ul>
+        </div>
+        <div class="column col-4 col-md-12">
+          <h5>Ссылки</h5>
+          <ul class="list-unstyled">
+            <li><a href="contacts.html">Обратная связь</a></li>
+            <li><a href="trends.html">Тренды</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center copyright">© 2024 DB Web. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

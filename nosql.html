@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoSQL-базы данных — DB Web</title>
+  <meta name="description" content="NoSQL базы: MongoDB, Redis, Neo4j">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="columns">
+        <div class="column col-3 col-md-6 col-sm-10">
+          <a href="index.html" class="navbar-brand">
+            <img src="img/logo.svg" alt="Логотип DB Web" width="32" height="32">
+            <span>DB&nbsp;Web</span>
+          </a>
+        </div>
+        <div class="column col-9 col-md-6 col-sm-2 text-right">
+          <button class="btn btn-link btn-burger" id="burger" aria-label="Открыть меню">
+            <i class="icon icon-menu"></i>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul class="nav">
+              <li class="nav-item"><a href="index.html">Главная</a></li>
+              <li class="nav-item"><a href="sql.html">SQL</a></li>
+              <li class="nav-item"><a href="nosql.html" class="active">NoSQL</a></li>
+              <li class="nav-item"><a href="comparison.html">Сравнение</a></li>
+              <li class="nav-item"><a href="trends.html">Тренды</a></li>
+              <li class="nav-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="columns">
+      <main class="column col-9 col-md-12">
+        <h1>NoSQL-базы данных</h1>
+        <p class="lead">Гибкие, масштабируемые решения для современных веб-приложений.</p>
+        <img src="img/nosql.jpg" alt="NoSQL базы данных" title="NoSQL" class="img-responsive" loading="lazy">
+
+        <h2>Категории NoSQL</h2>
+        <ul>
+          <li><strong>Документоориентированные:</strong> <a href="mongodb.html">MongoDB</a>, CouchDB.</li>
+          <li><strong>Ключ-значение:</strong> Redis, Memcached.</li>
+          <li><strong>Колоночные:</strong> Cassandra, HBase.</li>
+          <li><strong>Графовые:</strong> Neo4j, ArangoDB.</li>
+        </ul>
+
+        <h2>CAP-теорема</h2>
+        <p>NoSQL-базы часто жертвуют согласованностью (Consistency) ради доступности (Availability) и устойчивости к разделению (Partition tolerance).</p>
+
+        <table class="table table-striped">
+          <caption>Сравнение категорий NoSQL</caption>
+          <thead>
+            <tr><th>Тип</th><th>Пример</th><th>Применение</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Документная</td><td>MongoDB</td><td>CMS, каталоги</td></tr>
+            <tr><td>Ключ-значение</td><td>Redis</td><td>Кэш, сессии</td></tr>
+            <tr><td>Графовая</td><td>Neo4j</td><td>Соцсети, рекомендации</td></tr>
+          </tbody>
+        </table>
+      </main>
+
+      <aside class="column col-3 col-md-12">
+        <div class="sidebar">
+          <h4>NoSQL</h4>
+          <ul class="nav nav-vertical">
+            <li class="nav-item"><a href="mongodb.html">MongoDB</a></li>
+            <li class="nav-item"><a href="comparison.html">Сравнение с SQL</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="text-center copyright">© 2024 DB Web. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

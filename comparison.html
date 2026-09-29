@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сравнение SQL и NoSQL — DB Web</title>
+  <meta name="description" content="Сравнение реляционных и нереляционных баз данных">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="columns">
+        <div class="column col-3 col-md-6 col-sm-10">
+          <a href="index.html" class="navbar-brand">
+            <img src="img/logo.svg" alt="Логотип DB Web" width="32" height="32">
+            <span>DB&nbsp;Web</span>
+          </a>
+        </div>
+        <div class="column col-9 col-md-6 col-sm-2 text-right">
+          <button class="btn btn-link btn-burger" id="burger" aria-label="Открыть меню">
+            <i class="icon icon-menu"></i>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul class="nav">
+              <li class="nav-item"><a href="index.html">Главная</a></li>
+              <li class="nav-item"><a href="sql.html">SQL</a></li>
+              <li class="nav-item"><a href="nosql.html">NoSQL</a></li>
+              <li class="nav-item"><a href="comparison.html" class="active">Сравнение</a></li>
+              <li class="nav-item"><a href="trends.html">Тренды</a></li>
+              <li class="nav-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="columns">
+      <main class="column col-9 col-md-12">
+        <h1>Сравнение SQL и NoSQL</h1>
+        <p class="lead">Ключевые различия, преимущества и области применения.</p>
+
+        <table class="table table-striped table-hover">
+          <caption>Ключевые различия SQL и NoSQL</caption>
+          <thead>
+            <tr><th>Критерий</th><th>SQL</th><th>NoSQL</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Схема</td><td>Строгая</td><td>Гибкая</td></tr>
+            <tr><td>Масштабирование</td><td>Вертикальное</td><td>Горизонтальное</td></tr>
+            <tr><td>Транзакции</td><td>ACID</td><td>BASE</td></tr>
+            <tr><td>Язык запросов</td><td>SQL</td><td>Различные API</td></tr>
+            <tr><td>Примеры</td><td>PostgreSQL, MySQL</td><td>MongoDB, Redis</td></tr>
+            <tr><td>Целостность</td><td>Высокая</td><td>Зависит от настроек</td></tr>
+            <tr><td>Скорость разработки</td><td>Ниже на старте</td><td>Выше на старте</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Когда что выбирать?</h2>
+        <ul>
+          <li><strong>SQL</strong> — финансовые системы, ERP, там где важна целостность.</li>
+          <li><strong>NoSQL</strong> — большие данные, real-time аналитика, гибкие схемы.</li>
+          <li><strong>Гибрид</strong> — современные проекты часто используют обе технологии.</li>
+        </ul>
+      </main>
+
+      <aside class="column col-3 col-md-12">
+        <div class="sidebar">
+          <h4>См. также</h4>
+          <ul class="nav nav-vertical">
+            <li class="nav-item"><a href="sql.html">SQL</a></li>
+            <li class="nav-item"><a href="nosql.html">NoSQL</a></li>
+            <li class="nav-item"><a href="trends.html">Тренды 2024</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="text-center copyright">© 2024 DB Web. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
