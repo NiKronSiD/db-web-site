@@ -1,0 +1,231 @@
+/* ============================================================
+   DB Web — пользовательские стили поверх Spectre.css
+   ============================================================ */
+
+/* ---------- База ---------- */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { color: #2c2f36; }
+h1 { margin-bottom: 1rem; }
+h2 { margin-top: 2rem; margin-bottom: 1rem; }
+
+img.img-responsive {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+pre {
+  background: #f4f4f8;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+code { font-family: "Fira Code", Consolas, monospace; }
+
+/* ---------- Шапка ---------- */
+.site-header {
+  background: #3b4351;
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.site-header a,
+.site-header .navbar-brand span {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ---------- Бургер ---------- */
+.btn-burger {
+  display: none;
+  color: #fff;
+  font-size: 1.4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Меню ---------- */
+.main-nav .nav-item a {
+  color: #ddd;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s, border-color 0.2s;
+}
+.main-nav .nav-item a.active,
+.main-nav .nav-item a:hover {
+  color: #fff;
+  border-bottom: 2px solid #5755d9;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, #5755d9, #3b4351);
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.hero h1 { color: #fff; font-size: 2.2rem; }
+.hero .lead { color: #e6e6f0; margin-bottom: 1.5rem; }
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+.sidebar h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #5755d9;
+  letter-spacing: 0.5px;
+}
+.sidebar .nav-item a {
+  display: block;
+  padding: 0.35rem 0;
+  color: #3b4351;
+  text-decoration: none;
+}
+.sidebar .nav-item a:hover { color: #5755d9; }
+
+/* ---------- Баннер ---------- */
+.banner {
+  background: #ffe9b0;
+  border-left: 4px solid #ffb700;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Видео ---------- */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Формы ---------- */
+.subscribe-form,
+.contact-form {
+  margin-top: 1rem;
+}
+.contact-form .form-group { margin-bottom: 1rem; }
+
+/* ---------- Карточки ---------- */
+.card {
+  margin-bottom: 1.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #3b4351;
+  color: #ccc;
+  padding: 2rem 0 1rem;
+  margin-top: 3rem;
+}
+.site-footer a { color: #fff; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.site-footer h5 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.site-footer .copyright {
+  border-top: 1px solid #4a5261;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* ---------- Таблицы ---------- */
+.table caption {
+  caption-side: bottom;
+  font-size: 0.85rem;
+  color: #777;
+  padding-top: 0.5rem;
+}
+
+/* ============================================================
+   Адаптив (mobile-first: базовые стили — для десктопа,
+   ниже переопределяем для планшетов и мобильных)
+   ============================================================ */
+
+/* Планшеты и меньше */
+@media (max-width: 991px) {
+  .hero { padding: 3rem 0; }
+  .hero h1 { font-size: 1.8rem; }
+}
+
+/* Мобильные */
+@media (max-width: 767px) {
+  .btn-burger { display: inline-block; }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    background: #3b4351;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+  }
+  .main-nav.open { display: block; }
+
+  .main-nav .nav {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .main-nav .nav-item a {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-bottom: none;
+  }
+  .main-nav .nav-item a.active,
+  .main-nav .nav-item a:hover {
+    border-bottom: none;
+    background: #5755d9;
+    border-radius: 4px;
+  }
+
+  .hero { padding: 2rem 0; }
+  .hero h1 { font-size: 1.5rem; }
+  .hero .lead { font-size: 1rem; }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+
+  .sidebar { margin-top: 1.5rem; }
+}

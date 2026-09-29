@@ -1,0 +1,24 @@
+/* ============================================================
+   DB Web — основной скрипт
+   ============================================================ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('mainNav');
+
+  // Открытие/закрытие бургер-меню
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    // Закрытие меню при клике по ссылке (на мобильных)
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          nav.classList.remove('open');
+        }
+      });
+    });
+  }
+});
